@@ -7,19 +7,15 @@ contract Assignment7 is ERC20 {
     address owner;
     // Constructor to initialize the token
     // Fill in the parameters for the token name and symbol
-    constructor(string memory _name , string memory _symbol) ERC20 (_name , _symbol){
-        owner =msg.sender;
+    constructor() ERC20 ("assig 7" , "koko"){
 
     }
 
-    modifier onlyowner(address account){
-        require(account == owner ,"only owner can do this");
-        _;
-    }
+    
     // Function to mint tokens
     // Fill in the visibility modifier to be external
     // Set params as to address and amount
-    function mint (address to , uint256 amount) external onlyowner(msg.sender){
+    function mint (address to , uint256 amount) external {
 
     
         // Fill in the logic
