@@ -13,7 +13,7 @@ contract Assignment7 is ERC20 {
     }
 
     modifier onlyowner(address account){
-        require(account == owner);
+        require(account == owner ,"only owner can do this");
         _;
     }
     // Function to mint tokens
